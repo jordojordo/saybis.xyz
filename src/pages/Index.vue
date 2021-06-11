@@ -36,7 +36,7 @@ export default {
   methods: {
     handleSubmit() {
       axios
-        .post("https://saybis-node.default.45.79.180.102.xip.io", this.RequestTarget)
+        .post("http://jordo.in", this.RequestTarget)
         .then((res) => {
           console.log(res);
           // this.form = {
