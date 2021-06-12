@@ -36,7 +36,7 @@ export default {
   methods: {
     handleSubmit() {
       axios
-        .post("http://jordo.in", this.RequestTarget)
+        .post(process.env.PROXY_REQ_URL, this.RequestTarget)
         .then((res) => {
           console.log(res);
           // this.form = {
