@@ -35,12 +35,12 @@ export default {
   methods: {
     handleSubmit() {
       axios
-        .post("http://jordo.in", this.RequestTarget)
+        .post("https://jordo.in", this.RequestTarget)
         .then((res) => {
           console.log(res);
-          // this.form = {
-          //   RequestTarget: "",
-          // };
+          this.form = {
+            RequestTarget: "",
+          };
         })
         .catch((error) => {
           console.error(error);
