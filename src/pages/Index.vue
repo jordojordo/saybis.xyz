@@ -17,6 +17,9 @@
         </button>
       </label>
     </form>
+    <section id="proxied-webpage">
+      <div v-show="webpage" v-html="webpage"></div>
+    </section>
   </Layout>
 </template>
 
@@ -30,6 +33,7 @@ export default {
   data() {
     return {
       RequestTarget: "",
+      webpage: null
     };
   },
   methods: {
@@ -37,7 +41,7 @@ export default {
       axios
         .post("https://jordo.in", { RequestTarget: this.RequestTarget })
         .then((res) => {
-          console.log(res);
+          this.webpage = res.data
           this.form = {
             RequestTarget: "",
           };
